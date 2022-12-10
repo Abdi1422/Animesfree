@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 function App() {
   const [page,setpage]=useState([])
   setpage(1) 
-  
+  const fetchmovie=()=>{
     const options = {
       method: 'GET',
       headers: {
@@ -22,8 +22,9 @@ function App() {
         setimg(data.results[0].primaryImage.url)
         setname(data.results[0].primaryImage.caption.plainText)
     })
+  }
   
-
+    
 
   const pagecheck=()=>{
     if (img==null){
@@ -33,7 +34,6 @@ function App() {
   
   const [img,setimg]=useState([])
   const [name,setname]=useState([]) 
- 
 
   return (
     <div className="App">
@@ -45,6 +45,7 @@ function App() {
       </header>
       <main className='main'>
         <Navbar/>
+        <button onClick={fetchmovie()} ></button>         
           <div className='col1'>
             <Moviecard img={img} name={name}/>
             <Moviecard/>
