@@ -2,25 +2,38 @@ import './App.css';
 import {Button }from '@mui/material'
 import Navbar from "./components/navbar";
 import Moviecard from "./components/moveicard";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': '9cb9b72ffdmsh672191178f9bacfp19548djsn33b7d9e09267',
-      'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
-    }
-  };
-  fetch('https://moviesdatabase.p.rapidapi.com/titles?page=9', options)
-    .then(response => response.json())
-    .then(data =>{
-      console.log(data)
-      setimg(data.results[0].primaryImage.url)
-      setname(data.results[0].primaryImage.caption.plainText)
-  })
-    const [img,setimg]=useState([])
-    const [name,setname]=useState([]) 
+  const [page,setpage]=useState([])
+  setpage(1) 
+  
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '9cb9b72ffdmsh672191178f9bacfp19548djsn33b7d9e09267',
+        'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+      }
+    };
+    fetch(`https://moviesdatabase.p.rapidapi.com/titles?page=1`, options)
+      .then(response => response.json())
+      .then(data =>{
+        console.log(data)
+        setimg(data.results[0].primaryImage.url)
+        setname(data.results[0].primaryImage.caption.plainText)
+    })
+  
+
+
+  const pagecheck=()=>{
+    if (img==null){
+      return(page+1)
+    } 
+  }
+  
+  const [img,setimg]=useState([])
+  const [name,setname]=useState([]) 
+ 
 
   return (
     <div className="App">
