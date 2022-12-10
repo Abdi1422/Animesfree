@@ -5,9 +5,10 @@ import Moviecard from "./components/moveicard";
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [page,setpage]=useState([])
-  setpage(1) 
+  const page = 25000
   const fetchmovie=()=>{
+    const randy = Math.floor(Math.random()* 10 +1)
+    
     const options = {
       method: 'GET',
       headers: {
@@ -15,26 +16,27 @@ function App() {
         'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
       }
     };
-    fetch(`https://moviesdatabase.p.rapidapi.com/titles?page=1`, options)
+    fetch(`https://moviesdatabase.p.rapidapi.com/titles?page=${page}`, options)
       .then(response => response.json())
       .then(data =>{
         console.log(data)
-        setimg(data.results[0].primaryImage.url)
-        setname(data.results[0].primaryImage.caption.plainText)
+        setimg(data.results[randy].primaryImage.url)
+        setname(data.results[randy].primaryImage.caption.plainText)
     })
   }
-  
+  useEffect(()=>{
+    fetchmovie()
+  },[])
     
-
-  const pagecheck=()=>{
-    if (img==null){
-      return(page+1)
-    } 
-  }
-  
   const [img,setimg]=useState([])
   const [name,setname]=useState([]) 
-
+  
+  const nextpage = ()=>{
+    if (img == null){
+      page+1
+    }
+  }
+  nextpage()
   return (
     <div className="App">
       <header className='header'>
@@ -44,11 +46,10 @@ function App() {
         </div>
       </header>
       <main className='main'>
-        <Navbar/>
-        <button onClick={fetchmovie()} ></button>         
+        <Navbar/>            
           <div className='col1'>
             <Moviecard img={img} name={name}/>
-            <Moviecard/>
+            <Moviecard img={img} name={name}/>
             <Moviecard/>
           </div>
           <div className='col2'>

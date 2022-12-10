@@ -74,4 +74,9 @@ ion-icon {
 .headerdiv ion-icon {
   color: white;
   font-size: 30px;
+}
+
+.testbtn {
+  height: 100px;
+  width: 90px;
 }/*# sourceMappingURL=App.css.map */
