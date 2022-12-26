@@ -1,12 +1,15 @@
 import "./moviecard.css"
 
-const moviecard = ({img,name})=>{
+
+const moviecard = ({image,id,a})=>{ 
     return(
         <div className="carddiv">
-            <img src={img} className="img" ></img>
+            <a href={a} className="cardlink">
+            <img src={image} className="img" ></img>
             <div className="info" >
-                <p>{name}</p>
+                <p>{id}</p>
             </div>
+            </a>
         </div>
     )
 }

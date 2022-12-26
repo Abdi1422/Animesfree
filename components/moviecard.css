@@ -1,8 +1,8 @@
 .carddiv {
   border: 1px solid grey;
   width: 250px;
-  height: 200px;
-  margin: 75px;
+  height: 250px;
+  margin: 35px;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -13,12 +13,17 @@
 
 .img {
   border: 1px solid grey;
-  height: 50%;
+  height: 100%;
   width: 100%;
 }
 
 .info {
   border: 1px solid grey;
-  height: 50%;
+  height: 25%;
   width: 100%;
+  text-decoration: none;
+}
+
+.cardlink {
+  text-decoration: none;
 }/*# sourceMappingURL=moviecard.css.map */

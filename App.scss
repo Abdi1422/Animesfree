@@ -26,10 +26,10 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100vh;
+    height: 92.8vh;
     position: relative;
     bottom: 0px;
-    padding-left: 50px;;
+    
 }
 .textbox{
     width: 460px;
@@ -53,8 +53,10 @@ ion-icon{
     justify-content: center;
     align-items: center;
 }
-.col1{
-    margin-left: 60px;
+.col{
+    display: flex;
+    flex-wrap: wrap; 
+    margin-top: 50px;
 }
 .headerdiv{
     display: flex;
@@ -69,4 +71,12 @@ ion-icon{
 .testbtn{
     height: 100px;
     width: 90px;
+}
+.test{
+    border: 1px solid grey;
+    width: 250px;
+    height: 200px;
+    margin: 75px;
+    transition: .5s;
+    cursor: pointer;
 }

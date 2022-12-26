@@ -1,19 +1,19 @@
 import "./navbar.css"
-import {Button }from '@mui/material'
-const navbar = ()=>{
+
+const navbar = ({cat})=>{  
     return(
         <nav className="nav">
-            <h1>navbar</h1>
-            <Button variant="contained" color="info" size="large" style={{width:'100%',margin:'20px 0px',backgroundColor:"black"}}>button</Button>
-            <Button variant="contained" color="info" size="large" style={{width:'100%',margin:'20px 0px',backgroundColor:"black"}}>button</Button>
-            <Button variant="contained" color="info" size="large" style={{width:'100%',margin:'20px 0px',backgroundColor:"black"}}>button</Button>
-            <Button variant="contained" color="info" size="large" style={{width:'100%',margin:'20px 0px',backgroundColor:"black"}}>button</Button>
-            <Button variant="contained" color="info" size="large" style={{width:'100%',margin:'20px 0px',backgroundColor:"black"}}>button</Button>
-            <Button variant="contained" color="info" size="large" style={{width:'100%',margin:'20px 0px',backgroundColor:"black"}}>button</Button>
-            <Button variant="contained" color="info" size="large" style={{width:'100%',margin:'20px 0px',backgroundColor:"black"}}>button</Button>
-            <Button variant="contained" color="info" size="large" style={{width:'100%',margin:'20px 0px',backgroundColor:"black"}}>button</Button>
-            <Button variant="contained" color="info" size="large" style={{width:'100%',margin:'20px 0px',backgroundColor:"black"}}>button</Button>
-            <Button variant="contained" color="info" size="large" style={{width:'100%',margin:'20px 0px',backgroundColor:"black"}}>button</Button>
+            <h1 className="genres">genres</h1>
+            <button className="btn awardbtn" onClick={cat} >Award Winning</button>
+            <button className="btn actionbtn" onClick={cat}>Action</button>
+            <button className="btn" onClick={cat} >Suspense</button>
+            <button className="btn" onClick={cat} >Horror</button>
+            <button className="btn" onClick={cat}>Sports</button>
+            <button className="btn" onClick={cat}>Comedy</button>
+            <button className="btn" onClick={cat}>Adventure</button>
+            <button className="btn" onClick={cat}>Romance</button>
+            <button className="btn" onClick={cat}>Fantasy</button>
+            <button className="btn" onClick={cat}>Slice of Life</button>
         </nav>
     )
 }
