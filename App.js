@@ -6,9 +6,9 @@ import { useEffect, useState } from 'react';
 function App() {
   const [genre,setgenre]=useState([])
   const catergory=(e)=>{
-    console.log(e.target)
-    setgenre(e.target)
+    setgenre(e.target.innerText)
   }
+  console.log(genre)
   const fetchmovie=()=>{
     const randy = Math.floor(Math.random()* 10 +1)
     const options = {
@@ -61,7 +61,7 @@ function App() {
         </div>
       </header>
       <main className='main'>
-        <Navbar cat={catergory}/>   
+        <Navbar cat={catergory} fetch={fetchmovie}/>   
         <button className='test' onClick={fetchmovie}></button>         
           <div className='col'>
             {results.map((res)=>{

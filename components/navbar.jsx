@@ -1,6 +1,11 @@
 import "./navbar.css"
 
-const navbar = ({cat})=>{  
+const navbar = ({cat,fetch})=>{  
+    const both =()=>{
+        return cat
+        return fetch
+    }
+
     return(
         <nav className="nav">
             <h1 className="genres">genres</h1>
