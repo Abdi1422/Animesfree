@@ -4,11 +4,7 @@ import Moviecard from "./components/moveicard";
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [genre,setgenre]=useState([])
-  const catergory=(e)=>{
-    setgenre(e.target.innerText)
-  }
-  console.log(genre)
+  
   const fetchmovie=()=>{
     const randy = Math.floor(Math.random()* 10 +1)
     const options = {
@@ -31,6 +27,12 @@ function App() {
   useEffect(()=>{
     fetchmovie()
   },[])
+  const [genre,setgenre]=useState("Action")
+  const catergory=(e)=>{
+    console.log(e.target.innerText)
+    setgenre(e.target.innerText)
+    fetchmovie()
+  }
   const [results,setresults]= useState([])
   const [search,setsearch]=useState("")
   
@@ -57,20 +59,18 @@ function App() {
       <header className='header'>
         <div className='header-wrapper'>
           <div className='headerdiv'><h1>AnimesFree</h1><ion-icon name="videocam" ></ion-icon></div>
-          <div className='searchdiv'><input type="text" className="textbox" placeholder='Search' onChange={(e)=> setsearch(e.target.value)}/><button onClick={fetchsearch}><ion-icon name="search"></ion-icon></button></div>
+          <div className='searchdiv'><input type="text" className="textbox" placeholder='Search' onChange={(e)=> setsearch(e.target.value)}/><button onClick={fetchsearch} className="searchbtn" ><ion-icon name="search"></ion-icon></button></div>
         </div>
       </header>
       <main className='main'>
-        <Navbar cat={catergory} fetch={fetchmovie}/>   
-        <button className='test' onClick={fetchmovie}></button>         
+        <Navbar cat={catergory} />   
           <div className='col'>
             {results.map((res)=>{
               return(
                 <>
-                  <h1>{res.genres[0]}</h1>
                   <Moviecard image={res.image} id={res.title} a={res.link} /> 
                 </>
-              )  })}  
+              )})}  
           </div>   
       </main>
     </div>

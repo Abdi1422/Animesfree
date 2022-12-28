@@ -1,15 +1,11 @@
 import "./navbar.css"
 
-const navbar = ({cat,fetch})=>{  
-    const both =()=>{
-        return cat
-        return fetch
-    }
-
+const navbar = ({cat})=>{  
+    
     return(
         <nav className="nav">
             <h1 className="genres">genres</h1>
-            <button className="btn awardbtn" onClick={cat} >Award Winning</button>
+            <button className="btn awardbtn" onClick={cat} >Supernatural</button>
             <button className="btn actionbtn" onClick={cat}>Action</button>
             <button className="btn" onClick={cat} >Suspense</button>
             <button className="btn" onClick={cat} >Horror</button>
@@ -21,5 +17,6 @@ const navbar = ({cat,fetch})=>{
             <button className="btn" onClick={cat}>Slice of Life</button>
         </nav>
     )
+    
 }
 export default navbar;
