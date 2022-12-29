@@ -1,0 +1,107 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.app{
+    background-color: black;
+    max-height: 100vh;
+}
+.header{
+    background-color: black;
+    height: 70px;
+}
+.header-wrapper{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+    height: 100%;
+}
+.main{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 92.8vh;
+    position: relative;
+    bottom: 0px;
+    
+}
+.textbox{
+    width: 460px;
+    height: 37px;
+    color: black;
+    outline: none;
+    padding-left: 0px;
+    border: 0px;
+}
+.searchbtn{
+    background-color: white;
+    border: 0px;
+    cursor: pointer;
+    ion-icon{
+        font-weight: 800;
+        font-size: 18px;
+        color: black;
+    }
+}
+
+.searchdiv{
+    background-color: white;
+    border-radius: 100px;
+    border: 1px solid grey;
+    width: 535px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col{
+    display: flex;
+    flex-wrap: wrap; 
+    margin-top: 50px;
+}
+.headerdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    ion-icon{
+        color: white;
+        font-size: 30px;
+    }
+}
+.testbtn{
+    height: 100px;
+    width: 90px;
+}
+.test{
+    border: 1px solid grey;
+    width: 250px;
+    height: 200px;
+    margin: 75px;
+    transition: .5s;
+    cursor: pointer;
+}
+.searchbtn{
+    background-color: white;
+}
+@media (max-width:1000px){
+    .searchdiv{
+        width: 300px;
+    }
+    .textbox{
+        width: 200px;
+    }
+}
+@media (max-width:700px){
+    .searchdiv{
+        width: 200px;
+    }
+    .textbox{
+        width: 100px;
+    }
+}

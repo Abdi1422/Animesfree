@@ -1,0 +1,66 @@
+.carddiv{
+    border: 1px solid grey;
+    width: 250px;
+    height: 250px;
+    margin: 35px;
+    transition: .5s;
+    cursor: pointer;
+}
+.carddiv:hover{
+    transform: scale(1.1);
+}
+.img{
+    border: 1px solid grey;
+    height: 100%;
+    width: 100%;
+}
+.info{
+    border: 1px solid grey;
+    height: 25%;
+    width: 100%;
+    text-decoration: none;
+}
+.cardlink{
+    text-decoration: none;
+}
+@media (max-width:1900px){
+    .carddiv{
+        width: 200px;
+        height: 200px;
+        margin: 25px;
+        font-size: 14px;
+    }
+}
+@media (max-width:1400px){
+    .carddiv{
+        width: 200px;
+        height: 200px;
+        margin: 15px;
+        font-size: 14px;
+    }
+    
+}
+@media (max-width:1200px){
+    .carddiv{
+        width: 170px;
+        height: 170px;
+        margin: 15px;
+        font-size: 12px;
+    }
+}
+@media (max-width:1000px){
+    .carddiv{
+        width: 140px;
+        height: 140px;
+        margin: 0px;
+        font-size: 10px;
+    }
+}
+@media (max-width:500px){
+    .carddiv{
+        width: 100px;
+        height: 100px;
+        margin: 0px;
+        font-size: 8px;
+    }
+}
