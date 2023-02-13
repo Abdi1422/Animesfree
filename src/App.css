@@ -13,7 +13,7 @@
 
 .header {
   background-color: black;
-  height: 70px;
+  min-height: 70px;
 }
 
 .header-wrapper {
@@ -108,11 +108,30 @@
     width: 200px;
   }
 }
-@media (max-width: 700px) {
-  .searchdiv {
-    width: 200px;
+@media (max-width: 820px) {
+  .col {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
-  .textbox {
-    width: 100px;
+  .main {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 700px) {
+  .header-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 30px;
+  }
+  .main {
+    top: 0px;
+    padding-top: 20px;
+  }
+}
+@media (max-width: 300px) {
+  .searchdiv {
+    width: 95vw;
   }
 }/*# sourceMappingURL=App.css.map */

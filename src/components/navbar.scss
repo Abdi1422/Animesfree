@@ -25,3 +25,13 @@
 .btn:focus{
     background-color: rgb(231, 231, 231);
 }
+@media (max-width:700px){
+    .nav{
+        width: 30%;
+    }
+}
+@media (max-width:500px){
+    .nav{
+        width: 50%;
+    }
+}
