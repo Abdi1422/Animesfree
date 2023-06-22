@@ -18,6 +18,7 @@
   background-color: black;
   height: 50px;
   font-size: 20px;
+  border: 0px;
 }
 
 .btn:hover {

@@ -4,7 +4,7 @@ const navbar = ({cat})=>{
     
     return(
         <nav className="nav">
-            <h1 className="genres">genres</h1>
+            <h1 className="genres">Genres</h1>
             <button className="btn awardbtn" onClick={cat} >Supernatural</button>
             <button className="btn actionbtn" onClick={cat}>Action</button>
             <button className="btn" onClick={cat} >Suspense</button>
