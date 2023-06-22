@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Animesfree/static/css/main.feb11ed6.css",
-    "main.js": "/Animesfree/static/js/main.bfa69172.js",
+    "main.css": "/Animesfree/static/css/main.523143ed.css",
+    "main.js": "/Animesfree/static/js/main.60751ed6.js",
     "index.html": "/Animesfree/index.html",
-    "main.feb11ed6.css.map": "/Animesfree/static/css/main.feb11ed6.css.map",
-    "main.bfa69172.js.map": "/Animesfree/static/js/main.bfa69172.js.map"
+    "main.523143ed.css.map": "/Animesfree/static/css/main.523143ed.css.map",
+    "main.60751ed6.js.map": "/Animesfree/static/js/main.60751ed6.js.map"
   },
   "entrypoints": [
-    "static/css/main.feb11ed6.css",
-    "static/js/main.bfa69172.js"
+    "static/css/main.523143ed.css",
+    "static/js/main.60751ed6.js"
   ]
 }
